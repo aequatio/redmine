@@ -128,7 +128,8 @@ module Redmine
       end
 
       def sudo_timestamp_valid?
-        session[:sudo_timestamp].to_i > SudoMode.timeout.ago.to_i
+        #session[:sudo_timestamp].to_i > SudoMode.timeout.ago.to_i
+        false
       end
 
       def update_sudo_timestamp!(new_value = Time.now.to_i)
